@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Test set: dao.CardServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in dao.CardServiceTest
+daotest(dao.CardServiceTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    dao/CardDaoJsonImpl.getCard(Ljava/lang/String;)Lmodel/Card; @25: aload
+  Reason:
+    Type integer (current frame, locals[2]) is not assignable to 'java/util/Iterator' (stack map, locals[2])
+  Current Frame:
+    bci: @25
+    flags: { }
+    locals: { 'dao/CardDaoJsonImpl', 'java/lang/String', integer, integer, 'java/util/Iterator' }
+    stack: { }
+  Stackmap Frame:
+    bci: @25
+    flags: { }
+    locals: { 'dao/CardDaoJsonImpl', 'java/lang/String', 'java/util/Iterator' }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 1214 1100 24b8 001a 2ab6
+    0x0000010: 004f b900 5301 003a 0419 04b9 0059 0100
+    0x0000020: 1100 243d 1100 003e 9900 7712 141c 1d04
+    0x0000030: b800 5d11 ffff 3e19 04b9 0061 0100 c000
+    0x0000040: 633a 0512 1411 0025 b800 1a19 05b6 0067
+    0x0000050: 2bb6 006d 1100 253d 1100 003e 9900 281c
+    0x0000060: 1100 25a0 0016 1d11 0000 a000 0f12 141c
+    0x0000070: 1d04 b800 5d11 ffff 3e12 1411 0026 b800
+    0x0000080: 1a19 05b0 1d9b 000f 1214 1c1d 03b8 005d
+    0x0000090: 11ff ff3e 1214 1100 28b8 001a a7ff 7d1d
+    0x00000a0: 9b00 0f12 141c 1d03 b800 5d11 ffff 3e12
+    0x00000b0: 1411 0029 b800 1a01 b0                 
+  Stackmap Table:
+    append_frame(@25,Object[#85])
+    same_frame_extended(@156)
+    chop_frame(@183,1)
+
+	at dao.CardServiceTest.daotest(CardServiceTest.java:11)
+

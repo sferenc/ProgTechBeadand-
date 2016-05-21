@@ -1,0 +1,86 @@
+-------------------------------------------------------------------------------
+Test set: dao.CardDaoJsonImplTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.078 sec <<< FAILURE! - in dao.CardDaoJsonImplTest
+test(dao.CardDaoJsonImplTest)  Time elapsed: 0.078 sec  <<< ERROR!
+java.lang.VerifyError: Expecting a stackmap frame at branch target 63
+Exception Details:
+  Location:
+    model/Card.equals(Ljava/lang/Object;)Z @24: if_acmpne
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 1212 1100 4fb8 0018 2a2b
+    0x0000010: 1100 4f3d 1100 003e a600 271c 1100 4fa0
+    0x0000020: 0016 1d11 0000 a000 0f12 121c 1d04 b800
+    0x0000030: 5511 ffff 3e12 1211 0050 b800 1804 ac1d
+    0x0000040: 9b00 0f12 121c 1d03 b800 5511 ffff 3e12
+    0x0000050: 1211 0051 b800 182b 1100 513d 1100 003e
+    0x0000060: c700 271c 1100 51a0 0016 1d11 0000 a000
+    0x0000070: 0f12 121c 1d04 b800 5511 ffff 3e12 1211
+    0x0000080: 0052 b800 1803 ac1d 9b00 0f12 121c 1d03
+    0x0000090: b800 5511 ffff 3e12 1211 0053 b800 182a
+    0x00000a0: b600 612b b600 6111 0053 3d11 0000 3ea5
+    0x00000b0: 0027 1c11 0053 a000 161d 1100 00a0 000f
+    0x00000c0: 1212 1c1d 04b8 0055 11ff ff3e 1212 1100
+    0x00000d0: 54b8 0018 03ac 1d9b 000f 1212 1c1d 03b8
+    0x00000e0: 0055 11ff ff3e 1212 1100 55b8 0018 2bc0
+    0x00000f0: 0002 3a04 1212 1100 56b8 0018 2ab4 0021
+    0x0000100: 1904 b400 2111 0056 3d11 0000 3e9f 0027
+    0x0000110: 1c11 0056 a000 161d 1100 00a0 000f 1212
+    0x0000120: 1c1d 04b8 0055 11ff ff3e 1212 1100 57b8
+    0x0000130: 0018 03ac 1d9b 000f 1212 1c1d 03b8 0055
+    0x0000140: 11ff ff3e 1212 1100 58b8 0018 2ab4 0025
+    0x0000150: 1904 b400 2511 0058 3d11 0000 3e9f 0027
+    0x0000160: 1c11 0058 a000 161d 1100 00a0 000f 1212
+    0x0000170: 1c1d 04b8 0055 11ff ff3e 1212 1100 59b8
+    0x0000180: 0018 03ac 1d9b 000f 1212 1c1d 03b8 0055
+    0x0000190: 11ff ff3e 1212 1100 5ab8 0018 2ab4 001d
+    0x00001a0: 1100 5a3d 1100 003e c700 591c 1100 5aa0
+    0x00001b0: 0016 1d11 0000 a000 0f12 121c 1d04 b800
+    0x00001c0: 5511 ffff 3e12 1211 005b b800 1819 04b4
+    0x00001d0: 001d 1100 5b3d 1100 003e c600 7a1c 1100
+    0x00001e0: 5ba0 0016 1d11 0000 a000 0f12 121c 1d04
+    0x00001f0: b800 5511 ffff 3e12 1211 005c b800 1803
+    0x0000200: ac1d 9b00 0f12 121c 1d03 b800 5511 ffff
+    0x0000210: 3e12 1211 005d b800 182a b400 1d19 04b4
+    0x0000220: 001d b600 6311 005d 3d11 0000 3e9a 0027
+    0x0000230: 1c11 005d a000 161d 1100 00a0 000f 1212
+    0x0000240: 1c1d 04b8 0055 11ff ff3e 1212 1100 5eb8
+    0x0000250: 0018 03ac 1d9b 000f 1212 1c1d 03b8 0055
+    0x0000260: 11ff ff3e 1212 1100 5fb8 0018 2ab4 0023
+    0x0000270: 1904 b400 2311 005f 3d11 0000 3e9f 0027
+    0x0000280: 1c11 005f a000 161d 1100 00a0 000f 1212
+    0x0000290: 1c1d 04b8 0055 11ff ff3e 1212 1100 60b8
+    0x00002a0: 0018 03ac 1d9b 000f 1212 1c1d 03b8 0055
+    0x00002b0: 11ff ff3e 1212 1100 61b8 0018 2ab4 001f
+    0x00002c0: 1904 b400 1f11 0061 3d11 0000 3e9f 0027
+    0x00002d0: 1c11 0061 a000 161d 1100 00a0 000f 1212
+    0x00002e0: 1c1d 04b8 0055 11ff ff3e 1212 1100 62b8
+    0x00002f0: 0018 03ac 1d9b 000f 1212 1c1d 03b8 0055
+    0x0000300: 11ff ff3e 1212 1100 63b8 0018 04ac     
+  Stackmap Table:
+    same_frame_extended(@87)
+    same_frame_extended(@159)
+    same_frame_extended(@238)
+    append_frame(@332,Object[#2])
+    same_frame_extended(@412)
+    same_frame_extended(@537)
+    same_frame_extended(@620)
+    same_frame_extended(@700)
+    same_frame_extended(@780)
+
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)
+	at java.lang.Class.getConstructor0(Class.java:3075)
+	at java.lang.Class.getDeclaredConstructor(Class.java:2178)
+	at com.google.gson.internal.ConstructorConstructor.newDefaultConstructor(ConstructorConstructor.java:99)
+	at com.google.gson.internal.ConstructorConstructor.get(ConstructorConstructor.java:83)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:95)
+	at com.google.gson.Gson.getAdapter(Gson.java:416)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory.create(CollectionTypeAdapterFactory.java:53)
+	at com.google.gson.Gson.getAdapter(Gson.java:416)
+	at com.google.gson.Gson.fromJson(Gson.java:878)
+	at com.google.gson.Gson.fromJson(Gson.java:844)
+	at dao.CardDaoJsonImplTest.test(CardDaoJsonImplTest.java:24)
+

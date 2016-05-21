@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLController">
+   <children>
+      <Rectangle fx:id="rect14" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutY="360.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect24" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="120.0" layoutY="360.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect34" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="240.0" layoutY="360.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect41" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="360.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect42" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="360.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect43" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="360.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect44" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="360.0" layoutY="360.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect23" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="120.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect21" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect11" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect31" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="240.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect12" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect13" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect33" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="240.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect22" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="120.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="rect32" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="240.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <BorderPane fx:id="clickable11" layoutY="1.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top11" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left11" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right11" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom11" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName11" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable21" layoutY="120.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top21" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left21" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right21" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom21" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName21" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable31" layoutY="240.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top31" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left31" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right31" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom31" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName31" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable12" layoutX="120.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top12" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left12" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right12" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom12" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName12" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable22" layoutX="120.0" layoutY="120.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top22" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left22" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right22" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom22" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName22" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable32" layoutX="120.0" layoutY="240.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top32" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left32" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right32" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom32" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName32" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable23" layoutX="240.0" layoutY="120.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top23" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left23" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right23" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom23" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName23" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable13" layoutX="240.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top13" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left13" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right13" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom13" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName13" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable33" layoutX="240.0" layoutY="240.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top33" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left33" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right33" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom33" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName33" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <ScrollPane layoutX="561.0" layoutY="65.0" prefHeight="140.0" prefWidth="140.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="120.0">
+               <children>
+                  <Rectangle fx:id="crect3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutY="240.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle fx:id="crect2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle fx:id="crect1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="120.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <BorderPane fx:id="random1" onMouseClicked="#onRandomCardClick" prefHeight="120.0" prefWidth="120.0">
+                     <top>
+                        <Label fx:id="chooseAbleTop1" text="" BorderPane.alignment="CENTER" />
+                     </top>
+                     <bottom>
+                        <Label fx:id="chooseAbleBottom1" text="" BorderPane.alignment="CENTER" />
+                     </bottom>
+                     <left>
+                        <Label fx:id="chooseAbleLeft1" text="" BorderPane.alignment="CENTER" />
+                     </left>
+                     <right>
+                        <Label fx:id="chooseAbleRight1" text="" BorderPane.alignment="CENTER" />
+                     </right>
+                     <center>
+                        <Label fx:id="chooseAbleCardName1" text="" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="random2" layoutY="120.0" onMouseClicked="#onRandomCardClick" prefHeight="120.0" prefWidth="120.0">
+                     <center>
+                        <Label fx:id="chooseAbleCardName2" text="" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <Label fx:id="chooseAbleTop2" text="" BorderPane.alignment="CENTER" />
+                     </top>
+                     <left>
+                        <Label fx:id="chooseAbleLeft2" text="" BorderPane.alignment="CENTER" />
+                     </left>
+                     <right>
+                        <Label fx:id="chooseAbleRight2" text="" BorderPane.alignment="CENTER" />
+                     </right>
+                     <bottom>
+                        <Label fx:id="chooseAbleBottom2" text="" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane fx:id="random3" layoutY="240.0" onMouseClicked="#onRandomCardClick" prefHeight="120.0" prefWidth="120.0">
+                     <center>
+                        <Label fx:id="chooseAbleCardName3" text="" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <Label fx:id="chooseAbleTop3" text="" BorderPane.alignment="CENTER" />
+                     </top>
+                     <left>
+                        <Label fx:id="chooseAbleLeft3" text="" BorderPane.alignment="CENTER" />
+                     </left>
+                     <right>
+                        <Label fx:id="chooseAbleRight3" text="" BorderPane.alignment="CENTER" />
+                     </right>
+                     <bottom>
+                        <Label fx:id="chooseAbleBottom3" text="" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label fx:id="playerTurnLabel" layoutX="479.0" prefHeight="60.0" prefWidth="280.0" text="" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <BorderPane fx:id="clickable41" layoutY="360.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top41" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left41" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right41" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom41" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName41" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable42" layoutX="120.0" layoutY="360.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top42" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left42" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right42" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom42" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName42" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable43" layoutX="240.0" layoutY="360.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top43" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left43" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right43" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom43" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName43" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable14" layoutX="360.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top14" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left14" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right14" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom14" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName14" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable24" layoutX="360.0" layoutY="120.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top24" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left24" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right24" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom24" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName24" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable44" layoutX="360.0" layoutY="360.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top44" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left44" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right44" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom44" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName44" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="clickable34" layoutX="360.0" layoutY="240.0" onMouseClicked="#onAvailableFieldClicked" prefHeight="120.0" prefWidth="120.0">
+         <top>
+            <Label fx:id="top34" text="" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Label fx:id="left34" text="" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Label fx:id="right34" text="" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Label fx:id="bottom34" text="" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label fx:id="cardName34" text="" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <MenuButton layoutX="782.0" layoutY="-1.0" mnemonicParsing="false" text="Menü">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Kilépés" />
+          <MenuItem fx:id="newGame" mnemonicParsing="false" text="Új Játék" />
+        </items>
+      </MenuButton>
+      <Button fx:id="reset" layoutX="751.0" layoutY="427.0" mnemonicParsing="false" onMouseClicked="#reset" text="Reset" />
+      <Label fx:id="scoreboard" layoutX="511.0" layoutY="368.0" prefHeight="60.0" prefWidth="319.0" text="" wrapText="true" />
+      <GridPane gridLinesVisible="true" layoutX="481.0" layoutY="240.0" prefHeight="47.0" prefWidth="372.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="16.0" prefWidth="91.0" text="Érték1" />
+            <Label prefHeight="16.0" prefWidth="91.0" text="Érték2" GridPane.columnIndex="1" />
+            <Label prefHeight="16.0" prefWidth="91.0" text="Érték3" GridPane.columnIndex="2" />
+            <Label prefHeight="16.0" prefWidth="91.0" text="Érték4" GridPane.columnIndex="3" />
+            <Label fx:id="val1" prefHeight="16.0" prefWidth="91.0" GridPane.rowIndex="1" />
+            <Label fx:id="val2" prefHeight="16.0" prefWidth="91.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="val3" prefHeight="16.0" prefWidth="91.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="val4" prefHeight="16.0" prefWidth="91.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="16.0" prefWidth="91.0" text="Érték5" GridPane.columnIndex="4" />
+            <Label fx:id="val5" prefHeight="16.0" prefWidth="91.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

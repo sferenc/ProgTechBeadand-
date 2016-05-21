@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controller.GameControllerTest" time="0.01" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.60-b23"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/zsoltkir1/MyProjects/cardgame"/>
+    <property name="java.runtime.version" value="1.8.0_60-b27"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="net.sourceforge.cobertura.datafile" value="/home/zsoltkir1/MyProjects/cardgame/target/cobertura/cobertura.ser"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value=":/usr/local/lib:/home/fred/omni_inst/lib:/usr/local/lib:/home/fred/omni_inst/lib:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.13.0-46-generic"/>
+    <property name="user.home" value="/home/zsoltkir1"/>
+    <property name="user.timezone" value="Europe/Budapest"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="zsoltkir1"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher site"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_60"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="project.build.outputDirectory" value="/home/zsoltkir1/MyProjects/cardgame/target/generated-classes/cobertura"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="randomtest" classname="controller.GameControllerTest" time="0.01">
+    <error message="Instruction type does not match stack map&#10;Exception Details:&#10;  Location:&#10;    dao/CardDaoJsonImpl.getCard(Ljava/lang/String;)Lmodel/Card; @25: aload&#10;  Reason:&#10;    Type integer (current frame, locals[2]) is not assignable to &apos;java/util/Iterator&apos; (stack map, locals[2])&#10;  Current Frame:&#10;    bci: @25&#10;    flags: { }&#10;    locals: { &apos;dao/CardDaoJsonImpl&apos;, &apos;java/lang/String&apos;, integer, integer, &apos;java/util/Iterator&apos; }&#10;    stack: { }&#10;  Stackmap Frame:&#10;    bci: @25&#10;    flags: { }&#10;    locals: { &apos;dao/CardDaoJsonImpl&apos;, &apos;java/lang/String&apos;, &apos;java/util/Iterator&apos; }&#10;    stack: { }&#10;  Bytecode:&#10;    0x0000000: 033d 11ff ff3e 1214 1100 24b8 001a 2ab6&#10;    0x0000010: 004f b900 5301 003a 0419 04b9 0059 0100&#10;    0x0000020: 1100 243d 1100 003e 9900 7712 141c 1d04&#10;    0x0000030: b800 5d11 ffff 3e19 04b9 0061 0100 c000&#10;    0x0000040: 633a 0512 1411 0025 b800 1a19 05b6 0067&#10;    0x0000050: 2bb6 006d 1100 253d 1100 003e 9900 281c&#10;    0x0000060: 1100 25a0 0016 1d11 0000 a000 0f12 141c&#10;    0x0000070: 1d04 b800 5d11 ffff 3e12 1411 0026 b800&#10;    0x0000080: 1a19 05b0 1d9b 000f 1214 1c1d 03b8 005d&#10;    0x0000090: 11ff ff3e 1214 1100 28b8 001a a7ff 7d1d&#10;    0x00000a0: 9b00 0f12 141c 1d03 b800 5d11 ffff 3e12&#10;    0x00000b0: 1411 0029 b800 1a01 b0                 &#10;  Stackmap Table:&#10;    append_frame(@25,Object[#85])&#10;    same_frame_extended(@156)&#10;    chop_frame(@183,1)&#10;" type="java.lang.VerifyError">java.lang.VerifyError: Instruction type does not match stack map
+Exception Details:
+  Location:
+    dao/CardDaoJsonImpl.getCard(Ljava/lang/String;)Lmodel/Card; @25: aload
+  Reason:
+    Type integer (current frame, locals[2]) is not assignable to 'java/util/Iterator' (stack map, locals[2])
+  Current Frame:
+    bci: @25
+    flags: { }
+    locals: { 'dao/CardDaoJsonImpl', 'java/lang/String', integer, integer, 'java/util/Iterator' }
+    stack: { }
+  Stackmap Frame:
+    bci: @25
+    flags: { }
+    locals: { 'dao/CardDaoJsonImpl', 'java/lang/String', 'java/util/Iterator' }
+    stack: { }
+  Bytecode:
+    0x0000000: 033d 11ff ff3e 1214 1100 24b8 001a 2ab6
+    0x0000010: 004f b900 5301 003a 0419 04b9 0059 0100
+    0x0000020: 1100 243d 1100 003e 9900 7712 141c 1d04
+    0x0000030: b800 5d11 ffff 3e19 04b9 0061 0100 c000
+    0x0000040: 633a 0512 1411 0025 b800 1a19 05b6 0067
+    0x0000050: 2bb6 006d 1100 253d 1100 003e 9900 281c
+    0x0000060: 1100 25a0 0016 1d11 0000 a000 0f12 141c
+    0x0000070: 1d04 b800 5d11 ffff 3e12 1411 0026 b800
+    0x0000080: 1a19 05b0 1d9b 000f 1214 1c1d 03b8 005d
+    0x0000090: 11ff ff3e 1214 1100 28b8 001a a7ff 7d1d
+    0x00000a0: 9b00 0f12 141c 1d03 b800 5d11 ffff 3e12
+    0x00000b0: 1411 0029 b800 1a01 b0                 
+  Stackmap Table:
+    append_frame(@25,Object[#85])
+    same_frame_extended(@156)
+    chop_frame(@183,1)
+
+	at controller.GameControllerTest.randomtest(GameControllerTest.java:38)
+</error>
+  </testcase>
+</testsuite>
