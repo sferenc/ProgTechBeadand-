@@ -1,8 +1,0 @@
-dao/CardDaoJsonImpl$1.class
-model/Card.class
-dao/CardService.class
-controller/FXMLController.class
-dao/CardDaoJsonImpl.class
-controller/GameController.class
-dao/CardDao.class
-view/MainApp.class
