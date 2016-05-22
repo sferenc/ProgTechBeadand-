@@ -15,17 +15,24 @@ import java.util.Scanner;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 import model.Card;
 
 public class FXMLController implements Initializable {
@@ -49,48 +56,42 @@ public class FXMLController implements Initializable {
 	private Label[][] fieldtops,fieldbottoms,fieldnames,fieldlefts,fieldrights,chooseables;
 	private Label[][][] fields;
 	
-	private String[][] cardnames;
-	private int[][] tops;
-	private int[][] bottoms;
-	private int[][] lefts;
-	private int[][] right;
-	
 	private int cardIdentifier=0;
 	private boolean reseter=true;
 	private int ending=0;
-	private boolean turn=true;
+	private boolean turn=Players.turn;
 	
 	private int ifEndCounter(int count){
 		if (count==15){
 			int first=0,second=0;
 			for (int i=0;i<4;i++){
 				for (int j=0;j<4;j++){
-					if (rectangles[i][j].getFill()==Color.RED){
+					if (rectangles[i][j].getFill()==Players.player1color){
 						first++;
 					}
-					if (rectangles[i][j].getFill()==Color.DEEPPINK){
+					if (rectangles[i][j].getFill()==Players.player2color){
 						second++;
 					}
 				}
 			}
 			if (first>second){
-				scoreboard.setText("Gratulálunk a Vörös nyert!\n \tMéghozzá "+first+"-"+second+" fölénnyel !");
+				scoreboard.setText("Congratulation "+Players.player1name+" you WON!\n \tWith "+first+"-"+second+" score !");
 			}
 			if (first<second){
-				scoreboard.setText("Gratulálunk a Hupilila nyert!\n \tMéghozzá "+second+"-"+first+" fölénnyel !");
+				scoreboard.setText("Congratulation "+Players.player2name+" you WON!\n \tWith "+second+"-"+first+" score !");
 			}
 			if (first==second){
-				scoreboard.setText("A játék döntetlennel záródott!");
+				scoreboard.setText("The game ended in a draw!");
 			}
-			playerTurnLabel.setText("A Játék mostmár befejeződött");
+			playerTurnLabel.setText("Please Quit");
 			return 420;
 		} else return 1;
 	}
 	
 	int setCardSlot(int row,int column,Card rcard){
 		if (game.isAvailableCardSlot(row, column)){
-			if(turn) rectangles[column][row].setFill(Color.RED);
-			else rectangles[column][row].setFill(Color.DEEPPINK);
+			if(turn) rectangles[column][row].setFill(Players.player1color);
+			else rectangles[column][row].setFill(Players.player2color);
 			fields[0][row][column].setText(rcard.getTop()+"");
 			fields[1][row][column].setText(rcard.getBottom()+"");
 			fields[2][row][column].setText(rcard.getName());
@@ -110,31 +111,31 @@ public class FXMLController implements Initializable {
 	
 	private void turnColor(){
 		if (!turn){
-			playerTurnLabel.setText("Hupilila játékos következik!"); 
-			for (int i=0;i<3;i++) crects[i].setFill(Color.DEEPPINK);
+			playerTurnLabel.setText(Players.player2name+"'s trun!"); 
+			for (int i=0;i<3;i++) crects[i].setFill(Players.player2color);
 		}
 		else {
-			playerTurnLabel.setText("Vörös játékos következik!");
-			for (int i=0;i<3;i++) crects[i].setFill(Color.RED);
+			playerTurnLabel.setText(Players.player1name+"'s turn!");
+			for (int i=0;i<3;i++) crects[i].setFill(Players.player1color);
 		}
 	}
 	
 	private void colorChanger(int row,int column){
 		if (game.rightHigher(row, column)){
-			if (turn) rectangles[column+1][row].setFill(Color.DEEPPINK);
-				else rectangles[column+1][row].setFill(Color.RED);
+			if (turn) rectangles[column+1][row].setFill(Players.player2color);
+				else rectangles[column+1][row].setFill(Players.player1color);
 		}
 		if (game.leftHigher(row, column)){
-			if (turn) rectangles[column-1][row].setFill(Color.DEEPPINK);
-				else rectangles[column-1][row].setFill(Color.RED);
+			if (turn) rectangles[column-1][row].setFill(Players.player2color);
+				else rectangles[column-1][row].setFill(Players.player1color);
 		}
 		if (game.topHigher(row, column)){
-			if (turn) rectangles[column][row-1].setFill(Color.DEEPPINK);
-				else rectangles[column][row-1].setFill(Color.RED);
+			if (turn) rectangles[column][row-1].setFill(Players.player2color);
+				else rectangles[column][row-1].setFill(Players.player1color);
 		}
 		if (game.bottomHigher(row, column)){
-			if (turn) rectangles[column][row+1].setFill(Color.DEEPPINK);
-				else rectangles[column][row+1].setFill(Color.RED);
+			if (turn) rectangles[column][row+1].setFill(Players.player2color);
+				else rectangles[column][row+1].setFill(Players.player1color);
 		}
 	}
 	
@@ -154,10 +155,8 @@ public class FXMLController implements Initializable {
 	@FXML
 	private MenuItem newG;
 	
-	/*@FXML
-	private static void ac(ActionEvent event) {
-	    System.out.println("Róland egy köcsög");
-	}*/
+	@FXML
+	private Button button;
 
 	@FXML
 	private void reset(MouseEvent event){
@@ -210,11 +209,10 @@ public class FXMLController implements Initializable {
 		}
 		 
 	}
-       
+	
     @Override
-    public void initialize(URL url, ResourceBundle rb) {	
+    public void initialize(URL url, ResourceBundle rb) { 	
     	crects=new Rectangle[]{crect1,crect2,crect3};
-    	for (int i=0;i<3;i++) crects[i].setFill(Color.RED);
     	rectangles=new Rectangle[][]{
 			{rect11,rect12,rect13,rect14},
 			{rect21,rect22,rect23,rect24},
@@ -257,11 +255,18 @@ public class FXMLController implements Initializable {
 			{clickable11,clickable12,clickable13,clickable14},
 			{clickable21,clickable22,clickable23,clickable24},
 			{clickable31,clickable32,clickable33,clickable34},
-			{clickable41,clickable42,clickable43,clickable44}};
-			playerTurnLabel.setText("Válassz 1 kártyát a legördülő listából!(vörös játékos köre)");
-			randomCards=new Card[]{game.randomcard(),game.randomcard(),game.randomcard()};
-			for (int k=0;k<3;k++){
-				graphics(randomCards[k], k);
+			{clickable41,clickable42,clickable43,clickable44}};		
+			if (turn){
+				for (int i=0;i<3;i++) crects[i].setFill(Players.player1color);
+				playerTurnLabel.setText("Please choose a card from this list ("+ Players.player1name +" köre)");
 			}
+			else{
+				for (int i=0;i<3;i++) crects[i].setFill(Players.player2color);
+				playerTurnLabel.setText("Please choose a card from this list ("+ Players.player2name +" köre)");
+			}		
+		randomCards=new Card[]{game.randomcard(),game.randomcard(),game.randomcard()};
+		for (int k=0;k<3;k++){
+			graphics(randomCards[k], k);				
+		}   	
     }    
 }

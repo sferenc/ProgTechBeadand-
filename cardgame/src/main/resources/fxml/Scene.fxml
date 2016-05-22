@@ -401,5 +401,6 @@
             <Label fx:id="val5" prefHeight="16.0" prefWidth="91.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
          </children>
       </GridPane>
+      <Button fx:id="button" layoutX="209.0" layoutY="-75.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>

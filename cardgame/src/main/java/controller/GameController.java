@@ -3,6 +3,7 @@ package controller;
 import dao.CardDaoJsonImpl;
 import dao.CardService;
 import model.Card;
+import com.google.gson.Gson;
 
 public class GameController {
 	
