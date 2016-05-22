@@ -16,6 +16,7 @@ import javafx.scene.PointLight;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
@@ -61,15 +62,17 @@ public class ChooseController implements Initializable{
 	@FXML
     private void buttonAction(MouseEvent event) throws Exception {        
         
-        //FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
-        //Parent root=loader.load();
+		if ((Players.player1name.equals(Players.player2name))||(Players.player1color.equals(Players.player2color))){
+			startScreen.setText("You cannot choose the same playername or the same color! Please choose different!");
+		}
+		else{
         Parent root=FXMLLoader.load(ChooseController.class.getResource("/fxml/Scene.fxml"));
-        //Stage stage=(Stage) button.getScene().getWindow();
         Stage stage=(Stage) button.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setScene(scene);
         stage.show();
+		}
         
     }
 	
@@ -77,6 +80,8 @@ public class ChooseController implements Initializable{
 	PointLight light1,light2;
 	@FXML
 	Sphere sphere1,sphere2;
+	@FXML
+	Label startScreen;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -94,8 +99,7 @@ public class ChooseController implements Initializable{
 	    light2.setTranslateY(50);
 	    light2.setTranslateZ(-100);
 	    light2.setRotate(90);
-		
-		
+			
 	}
 
 	

@@ -19,7 +19,7 @@
       <ColorPicker fx:id="colorPicker2" layoutX="645.0" layoutY="100.0" onAction="#setColor" />
       <TextField fx:id="player1Name" layoutX="67.0" layoutY="128.0" onKeyReleased="#setName" promptText="Player1" />
       <TextField fx:id="player2Name" layoutX="619.0" layoutY="128.0" onKeyReleased="#setName" promptText="Player2" />
-      <Label layoutX="66.0" layoutY="-1.0" prefHeight="102.0" prefWidth="724.0" text="Please choose your names and your prefered colors then press to the Start Game button to start!" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="startScreen" layoutX="66.0" layoutY="-1.0" prefHeight="102.0" prefWidth="724.0" text="Please choose your names and your prefered colors then press to the Start Game button to start!" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="DejaVu Sans Bold" size="23.0" />
          </font></Label>
