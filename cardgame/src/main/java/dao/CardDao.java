@@ -9,7 +9,6 @@ public interface CardDao {
 	public Card getCard(String cardName);
 	
 	public List<Card> getCards();
-	//public Card[] getCards();
 	
 	public Card getRandomCard();
 }
