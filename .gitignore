@@ -1,0 +1,9 @@
+*.class
+
+# Package Files #
+*.jar
+
+cardgame/target
+.settings
+.project
+.classpath
