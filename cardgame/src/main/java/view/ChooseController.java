@@ -1,16 +1,13 @@
 package view;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.AmbientLight;
 import javafx.scene.Parent;
 import javafx.scene.PointLight;
 import javafx.scene.Scene;
@@ -18,14 +15,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Sphere;
 import javafx.stage.Stage;
-
+//CHECKSTYLE:OFF
 public class ChooseController implements Initializable{
+	// CHECKSTYLE:ON
 
 	@FXML 
 	Button button,button2;
@@ -43,8 +40,16 @@ public class ChooseController implements Initializable{
 	
 	@FXML
 	private void setName(KeyEvent event){
-		if (event.getSource()==player1Name) Players.player1name=player1Name.getText();
-		else Players.player2name=player2Name.getText();
+		if (event.getSource()==player1Name){
+			if((!player1Name.getText().equals(""))){
+			Players.player1name=player1Name.getText();
+			}
+		}
+		if (event.getSource()==player2Name){
+			if((!player2Name.getText().equals(""))){
+			Players.player2name=player2Name.getText();
+			}
+		}
 	}
 	
 	@FXML

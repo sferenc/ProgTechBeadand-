@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import dao.CardDaoJsonImpl;
+import dao.CardDao;
 import dao.CardService;
 import model.Card;
 
@@ -56,7 +56,7 @@ public class GameControllerTest {
 	
 	@Test
 	public void containsRandomCard(){
-		CardDaoJsonImpl dao= new CardDaoJsonImpl();
+		CardDao dao= new CardDao();
 		assertTrue(dao.getCards().contains(game.randomcard()));
 	}
 	

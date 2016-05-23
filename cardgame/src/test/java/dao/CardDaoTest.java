@@ -15,26 +15,24 @@ import com.google.gson.reflect.TypeToken;
 
 import model.Card;
 
-public class CardDaoJsonImplTest {
+public class CardDaoTest {
 	final Gson GSON = new Gson();
 	List<Card> cards = new ArrayList<Card>();
-	InputStream is = CardDaoJsonImpl.class.getResourceAsStream("/json/cards.json");
+	InputStream is = CardDao.class.getResourceAsStream("/json/cards.json");
 	
-	CardDaoJsonImpl daojson=new CardDaoJsonImpl();
+	CardDao daojson=new CardDao();
 
 	@Test
 	public void daoTest() {
-		cards=GSON.fromJson(new InputStreamReader(is), new TypeToken<ArrayList<Card>>() {}.getType());		
-		if (daojson.getCards().equals(cards)) assertTrue(true);
-		else assertTrue(false);
+		cards=GSON.fromJson(new InputStreamReader(is), new TypeToken<ArrayList<Card>>() {}.getType());	
+		assertTrue(daojson.getCards().equals(cards));		
 	}
 	
 	@Test
-	public void getRandomCardTest(){//fölös
+	public void getRandomCardTest(){
 		Random random=new Random();
 		List<Card> c=daojson.getCards();
-		if (daojson.getCards().contains(c.get(random.nextInt(c.size())))) assertTrue(true);
-		else assertTrue(false);
+		assertTrue(daojson.getCards().contains(c.get(random.nextInt(c.size()))));
 		
 		
 	}

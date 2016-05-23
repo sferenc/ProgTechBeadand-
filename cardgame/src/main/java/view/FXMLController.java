@@ -3,6 +3,9 @@ package view;
 import java.net.URL;
 import java.util.stream.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.sun.javafx.application.LauncherImpl;
 
 import controller.GameController;
@@ -34,11 +37,16 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import model.Card;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+//CHECKSTYLE:OFF
 public class FXMLController implements Initializable {
+	// CHECKSTYLE:ON
 	
-	GameController game = new GameController();	
-	Card[] randomCards;
+	private static Logger logger = LoggerFactory.getLogger(FXMLController.class);
+	
+	private GameController game = new GameController();	
+	private Card[] randomCards;
 	
 	@FXML
 	private Label playerTurnLabel,scoreboard,val1,val2,val3,val4,val5,
@@ -76,22 +84,34 @@ public class FXMLController implements Initializable {
 			}
 			if (first>second){
 				scoreboard.setText("Congratulation "+Players.player1name+" you WON!\n \tWith "+first+"-"+second+" score !");
+				logger.info("The game is ended");
+				reseter=false;
 			}
 			if (first<second){
 				scoreboard.setText("Congratulation "+Players.player2name+" you WON!\n \tWith "+second+"-"+first+" score !");
+				logger.info("The game is ended");
+				reseter=false;
 			}
 			if (first==second){
 				scoreboard.setText("The game ended in a draw!");
+				logger.info("The game is ended");
+				reseter=false;
 			}
-			playerTurnLabel.setText("Please Quit");
+			playerTurnLabel.setText("The game is ended please Quit");
 			return 420;
 		} else return 1;
 	}
 	
-	int setCardSlot(int row,int column,Card rcard){
+	private int setCardSlot(int row,int column,Card rcard){
 		if (game.isAvailableCardSlot(row, column)){
-			if(turn) rectangles[column][row].setFill(Players.player1color);
-			else rectangles[column][row].setFill(Players.player2color);
+			if(turn) {
+				rectangles[column][row].setFill(Players.player1color);
+				logger.info("The first player has played a card on the column:"+(column+1)+" row: "+(row+1));
+			}
+			else {
+				rectangles[column][row].setFill(Players.player2color);
+				logger.info("The second player has played a card on the column:"+(column+1)+" row: "+(row+1));
+			}
 			fields[0][row][column].setText(rcard.getTop()+"");
 			fields[1][row][column].setText(rcard.getBottom()+"");
 			fields[2][row][column].setText(rcard.getName());
@@ -111,7 +131,7 @@ public class FXMLController implements Initializable {
 	
 	private void turnColor(){
 		if (!turn){
-			playerTurnLabel.setText(Players.player2name+"'s trun!"); 
+			playerTurnLabel.setText(Players.player2name+"'s turn!"); 
 			for (int i=0;i<3;i++) crects[i].setFill(Players.player2color);
 		}
 		else {
@@ -153,9 +173,6 @@ public class FXMLController implements Initializable {
 	private Rectangle[] crects;
 	
 	@FXML
-	private MenuItem newG;
-	
-	@FXML
 	private Button button;
 
 	@FXML
@@ -193,14 +210,15 @@ public class FXMLController implements Initializable {
 						if(cardIdentifier==k+1){
 							cardIdentifier=setCardSlot(i, j, randomCards[k]);									
 							turn=game.turnChange(turn, cardIdentifier);	
-							turnColor();
+							
 							if(cardIdentifier==0){
+								turnColor();
 								game.storeData(i, j, randomCards[k]);
 								colorChanger(i, j);
+								reseter=true;
 								ending+=ifEndCounter(ending);
 								randomCards[k]=game.randomcard();
-								graphics(randomCards[k], k);
-								reseter=true;
+								graphics(randomCards[k], k);								
 							}
 						}
 					}
@@ -258,15 +276,16 @@ public class FXMLController implements Initializable {
 			{clickable41,clickable42,clickable43,clickable44}};		
 			if (turn){
 				for (int i=0;i<3;i++) crects[i].setFill(Players.player1color);
-				playerTurnLabel.setText("Please choose a card from this list ("+ Players.player1name +" köre)");
+				playerTurnLabel.setText("Please choose a card from this list ("+ Players.player1name +"'s turn)");
 			}
 			else{
 				for (int i=0;i<3;i++) crects[i].setFill(Players.player2color);
-				playerTurnLabel.setText("Please choose a card from this list ("+ Players.player2name +" köre)");
+				playerTurnLabel.setText("Please choose a card from this list ("+ Players.player2name +"'s turn)");
 			}		
 		randomCards=new Card[]{game.randomcard(),game.randomcard(),game.randomcard()};
 		for (int k=0;k<3;k++){
-			graphics(randomCards[k], k);				
-		}   	
+			graphics(randomCards[k], k);					
+		}   
+		logger.info("The game started");
     }    
 }
